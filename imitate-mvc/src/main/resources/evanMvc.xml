@@ -1,0 +1,7 @@
+<beans>
+    <componentScan package="com">
+    </componentScan>
+
+    <view prefix="/page/" suffix=".html">
+    </view>
+</beans>

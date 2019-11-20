@@ -1,0 +1,18 @@
+<beans>
+
+    <compentscan package="com"></compentscan>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
+                <!--   <ref bean="mappingJacksonHttpMessageConverter" />-->
+            </list>
+        </property>
+    </bean>
+</beans>
